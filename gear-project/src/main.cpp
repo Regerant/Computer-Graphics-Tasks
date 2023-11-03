@@ -267,41 +267,8 @@ void fll(const Matrix<uint>&b, Matrix<uint>&l, int i, int j, int c)
 	fll(b, l, i, j - 1, c); 
 	fll(b, l, i, j + 1, c);
 } 
-/*
-//функция бинаризации изображения
-void bnr(const Image &in, Matrix<uint>&bn)//ПОЧИНИ МЕНЯ
-{
-	int n_r = in.n_rows, n_c = in.n_cols;
-	uint r;
-	uint g;
-	uint b;
-	uint h = 175;
-	
-	//0.3 0.59 0.11
-  
-	for(int i = 0; i < n_r; ++i)
-		for(int j = 0; j < n_c; ++j)
-		{
-			tie(r, g, b) = in(i,j);
-			
-			
-			
-			if(r > h || g > h || b  > h)
-			{ 
-				bn(i,j) = 1; //0
-				//in(i,j) = make_tuple(0,180,0);
-			}
-			
-			else 
-			{
-				bn(i,j) = 0; //1
-				//in(i,j) = make_tuple(255,255,255);
-			}
-         
-		}     
-}
- */
 
+//функция бинаризации изображения
 uint get_limit(const Image& in)
 {
 	int max_h = 0;
